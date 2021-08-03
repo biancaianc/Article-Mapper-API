@@ -1,4 +1,4 @@
-package com.summer.intern.articlemapper.Models;
+package com.summer.intern.articlemapper.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

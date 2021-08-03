@@ -1,18 +1,29 @@
-package com.summer.intern.articlemapper.Services;
+package com.summer.intern.articlemapper.services;
 
-import com.summer.intern.articlemapper.Models.Article;
-import com.summer.intern.articlemapper.Repositories.ArticleRepository;
+import com.summer.intern.articlemapper.models.Article;
+import com.summer.intern.articlemapper.repositories.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class ArticleService {
-    @Autowired
+
     ArticleRepository articleRepository;
+
+    @Autowired
+    public ArticleService(ArticleRepository articleRepository) {
+        this.articleRepository = articleRepository;
+    }
+
     public List<Article> getArticles() {
+//        List<Article> articles = articleRepository.findAll();
+//        articles = articles.stream().map(article -> {
+//            article.setId(article.getId().toUpperCase());
+//            return article;
+//        }).collect(Collectors.toList());
+//        return articles;
         return articleRepository.findAll();
     }
 

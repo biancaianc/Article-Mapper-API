@@ -1,7 +1,7 @@
-package com.summer.intern.articlemapper.Controllers;
+package com.summer.intern.articlemapper.controllers;
 
-import com.summer.intern.articlemapper.Models.Article;
-import com.summer.intern.articlemapper.Services.ArticleService;
+import com.summer.intern.articlemapper.models.Article;
+import com.summer.intern.articlemapper.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
