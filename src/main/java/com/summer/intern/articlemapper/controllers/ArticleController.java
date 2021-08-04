@@ -7,12 +7,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class ArticleController {
     @Autowired
     ArticleService articleService;
     @GetMapping("/getArticles")
-    public ResponseEntity<?> getArticles(){
+    public ResponseEntity<List<Article>> getArticles(){
         return new ResponseEntity<>(articleService.getArticles(), HttpStatus.OK);
     }
     @GetMapping("/getArticle/{id}")
