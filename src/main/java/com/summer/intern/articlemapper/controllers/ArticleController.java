@@ -17,6 +17,10 @@ public class ArticleController {
     public ResponseEntity<List<Article>> getArticles(){
         return new ResponseEntity<>(articleService.getArticles(), HttpStatus.OK);
     }
+    @GetMapping("/get")
+    public String a(){
+        return "a";
+    }
     @GetMapping("/getArticle/{id}")
     public ResponseEntity<?> getArticle(@PathVariable String id){
         if(articleService.exist(id)){
